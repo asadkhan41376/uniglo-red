@@ -1,0 +1,171 @@
+/* SECTION BACKGROUND – isolated */
+.oreades-features2 {
+background-image: radial-gradient(at center center, #2A0404 0%, #060A0F 100%);
+  padding: 60px 0 0 0;
+  color: #fff;
+}
+
+/* CENTER TEXT */
+.of2-container {
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+}
+
+.of2-subtitle {
+  margin-bottom: 50px;
+  opacity: 0.9;
+}
+
+/* GRID – Desktop: Left / Center / Right */
+.of2-grid {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+/* Boxes LHS & RHS */
+.of2-left,
+.of2-right {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* Single feature box */
+.of2-box {
+  text-align: center;
+  max-width: 300px;
+  margin: auto;
+}
+
+.of2-box h3 {
+  color:white;
+}
+
+/* Icon */
+.of2-icon {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  margin: 0 auto 15px;
+}
+
+.of2-icon svg {
+  width: 100%;
+  height: 100%;
+  transform: scale(.6);
+}
+
+/* Middle Section */
+.of2-center {
+  position: relative;
+  box-shadow: 5px 5px 20px #000;
+  border-radius: 50px;
+}
+
+/* Image inside */
+.of2-center img {
+  width: 280px;
+  max-width: 100%;
+  z-index: 10;
+}
+
+/* Form on image */
+.middel-form {
+  position: absolute;
+  padding: 10px;
+  bottom: 1px;
+  right: 4px;
+  width: 95%;
+  height: 60%;
+  background-color: black;
+  border-radius: 50px;
+}
+
+.middel-form form input {
+  outline: none;
+  /* border: 0; */
+  font-size: 12px;
+  color: white;
+  height: 40px;
+  width: 100%;
+  background-color: gray;
+  
+}
+.middel-form form input::placeholder{
+    font-size: 12px;
+}
+
+.middel-form form button {
+background-color:#BB923A ;
+}
+
+.middel-form form button:hover {
+background-color:#BB923A ;
+}
+.forgetPasswrd{
+    font-size: 12px;
+    color: white;
+    /* background-color: aqua; */
+    width: 100%;
+    display: inline-block;
+    text-align: right;
+    margin: 0;
+}
+
+/* ------------------------------ */
+/* RESPONSIVE SECTION */
+/* ------------------------------ */
+
+/* Tablets */
+@media (max-width: 992px) {
+  .of2-grid {
+    grid-template-columns: 1fr 1fr; 
+  }
+
+  /* Move center image full row */
+  .of2-center {
+    grid-column: span 2;
+    margin-bottom: 40px;
+  }
+
+  .of2-left,
+  .of2-right {
+    gap: 25px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .of2-grid {
+    grid-template-columns: 1fr; 
+    text-align: center;
+  }
+
+  .of2-center {
+    grid-column: span 1;
+  }
+
+  .of2-left,
+  .of2-right {
+    align-items: center;
+  }
+
+  .middel-form {
+    height: 55%;
+    border-radius: 20px;
+  }
+}
+
+/* Small Phones */
+@media (max-width: 480px) {
+  .of2-center img {
+    width: 210px;
+  }
+
+  .middel-form {
+    height: 50%;
+  }
+}
